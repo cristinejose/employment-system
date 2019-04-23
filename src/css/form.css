@@ -1,0 +1,47 @@
+form {
+    padding:10px;
+    margin:70px;
+    width:70%;
+    border:solid;
+    background-color:#d9d9d9;
+    border: .5px solid #ccc;   
+    float: right;
+    /* margin-top: 102px; */
+ }
+
+ legend{
+     font-weight: bold;
+     font-size: 18px;
+     font-style: italic;
+ }
+
+ .inside{
+    font-size: 16px;
+ }
+
+ input[type=text],[type=date]{
+     width: 40%;
+     height: 30px;
+ }
+
+ .submit_button{
+    background-color: #555555;
+    color: white;
+    font-size: 12px;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    border:none;
+    margin-left: 130px;
+    width: 100px;
+ }
+
+ button:hover{
+     background-color: #888a88;
+    }
+
+ button:active {
+        background-color:#888a88;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
