@@ -1,79 +1,122 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/header.jsx';
-import {Form} from './components/form.jsx';
-import {Table} from './components/table.jsx';
+import { Form } from './components/form.jsx';
+import { Table } from './components/table.jsx';
 import Sidebar from './components/sidebar.jsx';
+import axios from 'axios';
 
 class App extends Component {
-  constructor(props) {  
+  constructor(props) {
     super(props);
-    
+
     this.state = {
-      usersList: [
-        {
-          employeeId:'001',
-          firstname: 'Tin',
-          middlename: 'Gonzales',
-          lastname: 'Jose',
-          bday: '1997-02-14',
-          position: 'Engineer'
-        },
-      ],
-      
-      user: {
-        employeeId: '',
-        firstname: '',
-        middlename: '',
-        lastname: '',
-        bday: '',
+
+      userList2: [],
+
+      user:
+      {
+        id: '',
+        firstName: '',
+        middleName: '',
+        lastName: '',
+        bDay: '',
         position: ''
       }
-  };
+    };
   }
+
+  getUsers() {
+    axios.get('http://localhost:8080/restsample01/rest/users/')
+      .then(res => {
+        const userList2 = res.data;
+        this.setState({ userList2: userList2 });
+      })
+
+  }
+
+  componentDidMount() {
+    this.getUsers();
+  }
+
+  // postUsers() {
+  //   axios.post( 'http://localhost:8080/restsample01/rest/users/', id)
+  //    .then(res => {
+  //      console.log(res);
+  //      console.log(res.data);
+  //    })
+  // }
+
+  // // componentWillMount() {
+  //   this.postUsers();
+  // }
+
+
+
   handleChangeInfo = e => {
-      const {name, value} = e.target;
-      this.setState((prevState) => ({
+    let { name, value } = e.target;
+    if(name === "id"){
+      value = parseInt(value);
+    }
+    this.setState((prevState) => ({
       user: {
         ...prevState.user,
         [name]: value
-        }
+      }
     }));
   }
 
   handleAddUser = e => {
-      let user = this.state.user;
-      let usersList = [...this.state.usersList];
-      usersList.push(user);
-      this.setState({usersList : usersList});
-      e.preventDefault();
-    }
+    let user = this.state.user;
+    let userList2 = [...this.state.userList2];
+    userList2.push(user);
+    this.setState({ userList2: userList2 });
+    e.preventDefault();
+    console.log("post");
+    console.log(user);
+    let str = "hello";
+    let headers = {
+      'Content-Type': 'application/json',
+   }
+    // axios.post('http://localhost:8080/restsample01/rest/users/try', str,{headers:headers} )
+    // .then(res => {
+    //   console.log(res);
+    //   console.log(res.data);
+    // });
+
+    axios.post('http://localhost:8080/restsample01/rest/users/', user ,{headers:headers})
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      });
+  }
+
 
   deleteUser = rowIndex => {
-      let usersList = [...this.state.usersList];
-      usersList.splice(rowIndex, 1);
-      this.setState({usersList: usersList});
-    }
+    let userList2 = [...this.state.userList2];
+    userList2.splice(rowIndex, 1);
+    this.setState({ userList2: userList2 });
+  }
+
 
   render() {
-      return (
+    console.log(this.state.userList2);
+    return (
       <div className="emp-sys-app">
-      
-      <Header/>
-      <Sidebar/>
-      
-      <div className='forms-panel'>
-          <Form  handleChangeInfo={this.handleChangeInfo} handleAddUser={this.handleAddUser}/>
-      </div>
 
-      <div className='table-panel'>
-          <Table usersList={this.state.usersList} deleteUser={this.deleteUser} />
-      </div>
+        <Header />
+        <Sidebar />
+
+        <div>
+          <Form handleChangeInfo={this.handleChangeInfo} handleAddUser={this.handleAddUser} />
+        </div>
+
+        <div>
+          <Table userList2={this.state.userList2} deleteUser={this.deleteUser} />
+        </div>
 
       </div>
     );
   }
 }
-
 export default App;

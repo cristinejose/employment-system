@@ -11,15 +11,15 @@ class Form extends Component {
                <legend> New Employee</legend><br/>
                 <div className="inside">
                      Employee ID:<br/>
-                    <input type="text" name="employeeId" onChange={this.props.handleChangeInfo} /><br/><br/>
+                    <input type="text" name="id" onChange={this.props.handleChangeInfo} /><br/><br/>
                      First name:<br/>
-                    <input type="text" name="firstname" onChange={this.props.handleChangeInfo}/><br/><br/>
+                    <input type="text" name="firstName" onChange={this.props.handleChangeInfo}/><br/><br/>
                     Middle name:<br/>
-                    <input type="text" name="middlename" onChange={this.props.handleChangeInfo} /><br/><br/>
+                    <input type="text" name="middleName" onChange={this.props.handleChangeInfo} /><br/><br/>
                      Last name:<br/>
-                     <input type="text" name="lastname" onChange={this.props.handleChangeInfo}/><br/><br/>
+                     <input type="text" name="lastName" onChange={this.props.handleChangeInfo}/><br/><br/>
                      Birthdate:<br/>
-                     <input type="date" name="bday" onChange={this.props.handleChangeInfo}/><br/><br/>
+                     <input type="text" name="bDay" onChange={this.props.handleChangeInfo}/><br/><br/>
                     Position:<br/>
                     <input type="text" name="position" onChange={this.props.handleChangeInfo}/><br/> <br/>
                    
@@ -30,7 +30,7 @@ class Form extends Component {
             </Fragment>
             );
         }
-    }
+    } 
 
     Form.propTypes = {
         handleChangeInfo: PropTypes.func,

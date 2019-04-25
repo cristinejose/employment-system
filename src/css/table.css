@@ -26,16 +26,11 @@ table {
     font-weight: none;
   }
   
-  .table-panel {
-    margin-bottom: 40px;
-  }
-  
   .user-table{
     float: right;
-    margin-top:25px;
-    margin-right: 30px;
+    margin-right: 70px;
     width:71.5%;
-   
+    margin-bottom: 60px;
   }
 
  
