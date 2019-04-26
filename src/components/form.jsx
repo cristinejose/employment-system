@@ -10,8 +10,8 @@ class Form extends Component {
                 <fieldset>
                <legend> New Employee</legend><br/>
                 <div className="inside">
-                     Employee ID:<br/>
-                    <input type="text" name="id" onChange={this.props.handleChangeInfo} /><br/><br/>
+                     {/* Employee ID:<br/>
+                    <input type="text" name="id" onChange={this.props.handleChangeInfo} /><br/><br/> */}
                      First name:<br/>
                     <input type="text" name="firstName" onChange={this.props.handleChangeInfo}/><br/><br/>
                     Middle name:<br/>

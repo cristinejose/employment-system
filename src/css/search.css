@@ -1,0 +1,15 @@
+.search {
+    margin-left: 700px;
+    margin-bottom: 20px;
+    width: 700px;
+}
+
+.search_button {
+    background-color: #555555;
+    color: white;
+    font-size: 12px;
+    padding: 10px 28px;
+    font-weight: bold;
+    border: none;
+    width: 100px;
+}
