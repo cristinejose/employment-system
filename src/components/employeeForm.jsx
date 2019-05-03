@@ -13,16 +13,16 @@ class EmployeeForm extends Component {
                         <legend> New Employee</legend><br />
                         <div className="inside">
 
-                            First name:<br />
-                            <input type="text" name="firstName" onChange={this.props.handleChangeInfo} /><br /><br />
-                            Middle name:<br />
-                            <input type="text" name="middleName" onChange={this.props.handleChangeInfo} /><br /><br />
-                            Last name:<br />
-                            <input type="text" name="lastName" onChange={this.props.handleChangeInfo} /><br /><br />
+                            First Name:<br />
+                            <input type="text" name="firstName" onChange={this.props.handleChangeInfo} placeholder="Enter firstname..."/><br /><br />
+                            Middle Name:<br />
+                            <input type="text" name="middleName" onChange={this.props.handleChangeInfo} placeholder="Enter middlename..."/><br /><br />
+                            Last Name:<br />
+                            <input type="text" name="lastName" onChange={this.props.handleChangeInfo } placeholder="Enter lastname..."/><br /><br />
                             Birthdate:<br />
-                            <input type="text" name="bDay" onChange={this.props.handleChangeInfo} /><br /><br />
+                            <input type="date" name="bDay" onChange={this.props.handleChangeInfo}/><br /><br />
                             Position:<br />
-                            <input type="text" name="position" onChange={this.props.handleChangeInfo} /><br /> <br />
+                            <input type="text" name="position" onChange={this.props.handleChangeInfo} placeholder="Enter position..."/><br /> <br />
 
                             <button type="button" onClick={this.props.handleAddEmployee} className="submit_button" >Add</button>
                         </div>

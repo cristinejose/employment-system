@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import '../css/compensationForm.css';
 import PropTypes from 'prop-types';
+import {myFunction} from '../util/popup.js';
 
 
 class CompensationForm extends Component {
@@ -14,17 +15,20 @@ class CompensationForm extends Component {
                             <div className="inside">
 
                                 Id:<br />
-                                <input type="text" name="id_comp" onChange={this.props.handleChangeInfo} /><br /><br />
+                                <input type="text" name="id_comp" onChange={this.props.handleChangeInfo} placeholder="Enter employee's Id..."/><br /><br />
                                 Month:<br />
-                                <input type="text" name="month" onChange={this.props.handleChangeInfo} /><br /><br />
+                                <input type="text" name="month" onChange={this.props.handleChangeInfo} placeholder ="Enter month..." /><br /><br />
                                 Salary:<br />
-                                <input type="text" name="salary" onChange={this.props.handleChangeInfo} /><br /><br />
+                                <input type="text" name="salary" onChange={this.props.handleChangeInfo} placeholder ="Enter salary..." /><br /><br />
                                 Bonus:<br />
-                                <input type="text" name="bonus" onChange={this.props.handleChangeInfo} /><br /><br />
+                                <input type="text" name="bonus" onChange={this.props.handleChangeInfo} placeholder ="Enter bonus..." /><br /><br />
                                 Commission:<br />
-                                <input type="text" name="commission" onChange={this.props.handleChangeInfo} /><br /><br />
+                                <input type="text" name="commission" onChange={this.props.handleChangeInfo} placeholder ="Enter commission..."/><br /><br />
 
-                                <button type="button" onClick={this.props.handleAddCompensation} className="submit_button" >Add</button>
+                            <div>
+                                <button type="button" onClick={this.props.handleAddCompensation} className="submit_button" classId="popup" onClick={myFunction} > Add</button>
+                                <span className="popuptext" id="myPopup"> Compensation Successfuly Added! </span>
+                                </div>
                             </div>
                         </fieldset>
                     </form>
@@ -37,8 +41,9 @@ class CompensationForm extends Component {
 
 CompensationForm.propTypes = {
     handleChangeInfo: PropTypes.func,
-    handleAddCompensation: PropTypes.func
+    handleAddCompensation: PropTypes.func,
 }
+
 
 export {
     CompensationForm

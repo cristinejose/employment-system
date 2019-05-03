@@ -8,6 +8,8 @@ class AddEmployee extends Component {
 
     this.state = {
 
+      filtered:[],
+
       employeeList: [],
 
       employee:

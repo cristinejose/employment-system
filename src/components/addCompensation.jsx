@@ -60,7 +60,6 @@ class AddCompensation extends Component {
   }
 
 
-
   //RENDER METHOD
   render() {
     console.log(this.state.compensationList);
