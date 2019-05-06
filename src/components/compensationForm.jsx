@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import '../css/compensationForm.css';
 import PropTypes from 'prop-types';
-import {myFunction} from '../util/popup.js';
 
 
 class CompensationForm extends Component {
@@ -26,8 +25,8 @@ class CompensationForm extends Component {
                                 <input type="text" name="commission" onChange={this.props.handleChangeInfo} placeholder ="Enter commission..."/><br /><br />
 
                             <div>
-                                <button type="button" onClick={this.props.handleAddCompensation} className="submit_button" classId="popup" onClick={myFunction} > Add</button>
-                                <span className="popuptext" id="myPopup"> Compensation Successfuly Added! </span>
+                                <button type="button" onClick={this.props.handleAddCompensation} className="submit_button" > Add</button>
+            
                                 </div>
                             </div>
                         </fieldset>

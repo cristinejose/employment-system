@@ -12,11 +12,11 @@ class ViewCompensation extends Component {
 
             compensation:
             {
-              id_comp: '',
-              month: '',
-              salary: '',
-              bonus: '',
-              commission: '',
+                id_comp: '',
+                month: '',
+                salary: '',
+                bonus: '',
+                commission: '',
             }
         };
     }
@@ -25,8 +25,8 @@ class ViewCompensation extends Component {
     getCompensations() {
         axios.get('http://localhost:8080/restsample01/rest/compensations/')
             .then(res => {
-                const  compensationList = res.data;
-                this.setState({  compensationList: compensationList });
+                const compensationList = res.data;
+                this.setState({ compensationList: compensationList });
             })
 
     }
@@ -50,7 +50,6 @@ class ViewCompensation extends Component {
                 console.log(res.data);
             })
     }
-
 
     //RENDER METHOD
     render() {

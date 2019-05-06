@@ -60,3 +60,7 @@ td {
     border: none;
     padding: 5px;
 }
+
+.compensation-table-cell {
+    text-align: center;
+}

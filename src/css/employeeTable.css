@@ -35,7 +35,7 @@ tr:hover {
     width: 71.5%;
     margin-bottom: 60px;
     position: relative;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .employee-table-row {
@@ -59,4 +59,24 @@ td {
 .edit {
     border: none;
     padding: 5px;
+}
+
+.employee-table-cell {
+    text-align: center;
+}
+
+.search_button {
+    background-color: #555555;
+    color: white;
+    font-size: 14px;
+    padding: 8px 10px;
+    font-weight: bold;
+    border: 1px;
+}
+
+.search-container {
+    margin-top: 100px;
+    margin-left: 1000px;
+    position: fixed;
+    width: 500px;
 }

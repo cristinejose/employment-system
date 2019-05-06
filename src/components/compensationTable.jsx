@@ -15,13 +15,13 @@ class CompensationTable extends Component {
                     <table className='compensation-table'>
                         <tbody>
                             <tr className='compensation-table-row'>
-                                <th className='compensation-table-cell'>Employee ID</th>
+                                <th className='compensation-table-cell'>EMPLOYEE ID</th>
                                 <th className='compensation-table-cell'>MONTH</th>
                                 <th className='compensation-table-cell'>SALARY</th>
                                 <th className='compensation-table-cell'>BONUS</th>
                                 <th className='compensation-table-cell'>COMMISSION</th>
-                                <th className='compensation-table-cell'></th>
-                                <th className='compensation-table-cell'></th>
+                                <th className='compensation-table-cell'>TOTAL</th>
+                                <th className='compensation-table-cell'>ACTION</th>
                                 
                             </tr>
                             {
@@ -33,8 +33,10 @@ class CompensationTable extends Component {
                                             <td className='compensation-table-cell'>{compensation.salary}</td>
                                             <td className='compensation-table-cell'>{compensation.bonus}</td>
                                             <td className='compensation-table-cell'>{compensation.commission}</td>
-                                            <td className='compensation-table-cell'><button type='button' onClick={this.props.editCompensation}>Edit</button></td>
-                                            <td className='compensation-table-cell'><button type='button' onClick={() => this.props.deleteCompensation(id_comp)}>Delete</button></td>
+                                            <td className='compensation-table-cell'>{(+compensation.salary)+(+compensation.bonus)+(+compensation.commission)}</td>
+                                           
+                                            <td className='compensation-table-cell'><button type='button' onClick={this.props.editCompensation}>Edit</button>
+                                            <button type='button' onClick={() => this.props.deleteCompensation(id_comp)}>Delete</button></td>
                                             
                                         </tr>
                                     )

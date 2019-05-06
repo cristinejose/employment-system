@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../css/sidebar.css';
 import { Route, NavLink, HashRouter } from "react-router-dom";
 import Home from './home.jsx';
-import SearchEmployee from './searchEmployee.jsx';
+
 import AddEmployee from './addEmployee.jsx';
 import ViewEmployee from './viewEmployee.jsx';
 import AddCompensation from './addCompensation.jsx';
@@ -18,7 +18,7 @@ class Sidebar extends Component {
                     
                     <ul className= "sidebar">
                         <li><NavLink to='/home'>HOME</NavLink></li>
-                        <li><NavLink to='/searchEmployee'>SEARCH EMPLOYEE</NavLink></li>
+                       
                         <li><NavLink to='/addEmployee'>ADD EMPLOYEE</NavLink></li>
                         <li><NavLink to='/viewEmployee'>VIEW EMPLOYEES</NavLink></li>
                         <li><NavLink to='/addCompensation'>ADD COMPENSATION</NavLink></li>
@@ -30,7 +30,7 @@ class Sidebar extends Component {
                   
                     <div>
                         <Route path='/home' component={Home} />
-                        <Route path='/searchEmployee' component={SearchEmployee} />
+                        
                         <Route path='/addEmployee' component={AddEmployee} />
                         <Route path='/viewEmployee' component={ViewEmployee} />
                         <Route path='/addCompensation' component={AddCompensation} />

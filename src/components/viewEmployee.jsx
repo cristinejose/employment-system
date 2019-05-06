@@ -8,6 +8,8 @@ class ViewEmployee extends Component {
 
         this.state = {
 
+            active: true,
+
             employeeList: [],
 
             employee:
@@ -21,6 +23,12 @@ class ViewEmployee extends Component {
             }
         };
     }
+    
+    handleClick() {
+        this.setState({
+            active: !this.state.active
+        });
+    }
 
     //GET METHOD
     getEmployees() {
@@ -29,7 +37,6 @@ class ViewEmployee extends Component {
                 const employeeList = res.data;
                 this.setState({ employeeList: employeeList });
             })
-
     }
 
 
@@ -59,9 +66,8 @@ class ViewEmployee extends Component {
         return (
 
             <div>
-                <EmployeeTable employeeList={this.state.employeeList} deleteEmployee={this.deleteEmployee} editEmployee={this.editEmployee} />
+                <EmployeeTable handleClick={this.handleClick} employeeList={this.state.employeeList} deleteEmployee={this.deleteEmployee} editEmployee={this.editEmployee} />
             </div>
-
 
         );
     }

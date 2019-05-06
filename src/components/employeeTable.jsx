@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import '../css/employeeTable.css';
+import { myFunction } from '../util/search.js';
+
 
 class EmployeeTable extends Component {
 
@@ -8,9 +10,15 @@ class EmployeeTable extends Component {
 
         return (
             <Fragment>
-                
+
                 <div>
-                    <table className='employee-table'>
+                    <div className="search-container">
+                        <input id="myInput" type="text" placeholder="Search here..." className="search" onKeyUp={myFunction} />
+                        {/* <img src="https://www.iconsdb.com/dark-gray-icons/search-3-icon.html" className='image'/>   */}
+                    </div>
+
+
+                    <table className='employee-table' id="MyTable">
                         <tbody>
                             <tr className='employee-table-row'>
                                 <th className='employee-table-cell'>Employee ID</th>
@@ -35,30 +43,10 @@ class EmployeeTable extends Component {
                                             <td className='employee-table-cell'>{employee.position}</td>
                                             <td className='employee-table-cell'><button type='button' onClick={this.props.editEmployee}>Edit</button></td>
                                             <td className='employee-table-cell'><button type='button' onClick={() => this.props.deleteEmployee(id)}>Delete</button></td>
-
                                         </tr>
                                     )
                                 })
                             }
-
-                            {/* {
-                                this.state.filtered.map((employee, id) => {
-                                    return (
-                                        <tr key={id}>
-
-                                            <th scope="row" onClick={this.toggle.bind(this)}>{employee.id}</th>
-                                            <td onClick={this.toggle.bind(this)}>{employee.firstName}</td>
-                                            <td onClick={this.toggle.bind(this)}>{employee.middleName}</td>
-                                            <td onClick={this.toggle.bind(this)}>{employee.lastName}</td>
-                                            <td onClick={this.toggle.bind(this)}>{employee.bDay}</td>
-                                            <td onClick={this.toggle.bind(this)}>{employee.position}</td>
-                                        </tr>
-                                    )
-                                }
-
-
-                                )
-                            } */}
 
                         </tbody>
                     </table>
@@ -70,7 +58,7 @@ class EmployeeTable extends Component {
 
 EmployeeTable.propTypes = {
     editEmployee: PropTypes.func,
-    deleteEmployee: PropTypes.func
+    deleteEmployee: PropTypes.func,
 
 }
 
