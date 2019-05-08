@@ -7,7 +7,7 @@ export function searchEmp() {
     tr = table.getElementsByTagName("tr");
     for (i = 0; i < tr.length; i++) {
 
-        td = tr[i].getElementsByTagName("td")[0];
+        td = tr[i].getElementsByTagName("td")[1];
         if (td) {
             txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -15,7 +15,7 @@ export function searchEmp() {
             } else {
                 tr[i].style.display = "none";
 
-                td = tr[i].getElementsByTagName("td")[1];
+                td = tr[i].getElementsByTagName("td")[2];
                 if (td) {
                     txtValue = td.textContent || td.innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -23,7 +23,7 @@ export function searchEmp() {
                     } else {
                         tr[i].style.display = "none";
 
-                        td = tr[i].getElementsByTagName("td")[3];
+                        td = tr[i].getElementsByTagName("td")[4];
                         if (td) {
                             txtValue = td.textContent || td.innerText;
                             if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -32,7 +32,7 @@ export function searchEmp() {
                                 tr[i].style.display = "none";
 
 
-                                td = tr[i].getElementsByTagName("td")[5];
+                                td = tr[i].getElementsByTagName("td")[6];
                                 if (td) {
                                     txtValue = td.textContent || td.innerText;
                                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -61,7 +61,7 @@ export function searchComp() {
     tr = table.getElementsByTagName("tr");
     for (i = 0; i < tr.length; i++) {
 
-        td = tr[i].getElementsByTagName("td")[0];
+        td = tr[i].getElementsByTagName("td")[1];
         if (td) {
             txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {

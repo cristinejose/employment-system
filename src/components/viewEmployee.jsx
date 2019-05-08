@@ -23,9 +23,6 @@ class ViewEmployee extends Component {
             }
         };
     }
-    
-   //EDIT METHOD
-   
 
 
    

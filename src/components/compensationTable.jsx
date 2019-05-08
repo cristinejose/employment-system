@@ -44,9 +44,16 @@ class CompensationTable extends Component {
                         <input id="myInput" type="text" placeholder="Search Employee ID here..." className="search" onKeyUp={searchComp} />
                     </div>
 
+
+
+                    <div id="rIndex"></div>
+
+
+
                     <table className='compensation-table' id="MyTable">
                         <thead>
                             <tr className='compensation-table-row'>
+                            <th></th>
                                 <th className='compensation-table-cell'>EMPLOYEE ID</th>
                                 <th className='compensation-table-cell'>MONTH</th>
                                 <th className='compensation-table-cell'>SALARY</th>
@@ -59,9 +66,10 @@ class CompensationTable extends Component {
                         </thead>
                         <tbody>
                             {
-                                this.props.compensationList.map((compensation, id_comp) => {
+                                this.props.compensationList.map((compensation, index) => {
                                     return (
                                         <tr className='compensation-table-content' key={compensation.id_comp} onClick={showRow_comp}>
+                                             <td id="rIndex" className='employee-table-cell'>{index}</td>
                                             <td className='compensation-table-cell'> {compensation.id_comp}</td>
                                             <td className='compensation-table-cell'> {compensation.month} </td>
                                             <td className='compensation-table-cell'>{compensation.salary}</td>

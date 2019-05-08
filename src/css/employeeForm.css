@@ -1,17 +1,10 @@
  form {
      padding: 10px;
-     /* margin: 50px; */
      width: 500px;
      border: solid;
      background-color: #d9d9d9;
      border: .5px solid #ccc;
-     /* float: right; */
-     /* margin-top: 5px; */
-     /* margin-left: auto;
-     margin-right: auto; */
      text-align: center;
-     /* display: inline-block; */
-     /* float: right; */
      position: fixed;
      margin-top: 100px;
  }
@@ -40,7 +33,6 @@
      border-radius: 8px;
      font-weight: bold;
      border: none;
-     /* margin-left: 40px; */
      width: 100px;
      align-self: center;
  }

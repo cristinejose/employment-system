@@ -23,18 +23,18 @@ class EmployeeTable extends Component {
                             <strong> <p > EMPLOYEE PROFILE</p> </strong>
                             <div classId="data" >
 
-                                ID: 
-                                <input className="box" id="id" /> <br /> <br/>
-                                FIRST NAME: 
-                                <input className="box" id="fname" /><br />  <br/>
-                                MIDDLE NAME: 
-                                <input className="box" id="mname" /><br />  <br/>
-                                LAST NAME: 
-                                <input className="box" id="lname" /><br /> <br/>
-                                BIRTH DATE: 
-                                <input className="box" id="bday" /> <br /> <br/>
-                                POSITION:  
-                                <input  className="box" id="position" /> <br />  <br/>
+                                ID:
+                                <input className="box" id="id" /> <br /> <br />
+                                FIRST NAME:
+                                <input className="box" id="fname" /><br />  <br />
+                                MIDDLE NAME:
+                                <input className="box" id="mname" /><br />  <br />
+                                LAST NAME:
+                                <input className="box" id="lname" /><br /> <br />
+                                BIRTH DATE:
+                                <input className="box" id="bday" /> <br /> <br />
+                                POSITION:
+                                <input className="box" id="position" /> <br />  <br />
 
                             </div>
                             <button className="edit_button" type='button' onClick={editRow}>Edit</button>
@@ -49,9 +49,16 @@ class EmployeeTable extends Component {
                     </div>
 
 
+
+                    <div id="rIndex"></div>
+
+
+
+
                     <table className='employee-table' id="MyTable">
                         <thead>
                             <tr className='employee-table-row'>
+                                <th> </th>
                                 <th className='employee-table-cell'>Employee ID</th>
                                 <th className='employee-table-cell'>FIRST NAME</th>
                                 <th className='employee-table-cell'>MIDDLE NAME</th>
@@ -64,10 +71,11 @@ class EmployeeTable extends Component {
                         </thead>
                         <tbody>
                             {
-                                this.props.employeeList.map((employee, id) => {
+                                this.props.employeeList.map((employee, index) => {
                                     return (
-                                        <tr className='employee-table-content' key={employee.id} id="row" onClick={showRow} >
 
+                                        <tr className='employee-table-content' key={employee.id} id="row" onClick={showRow} >
+                                            <td id="rIndex" className='employee-table-cell'>{index}</td>
                                             <td id="id" className='employee-table-cell'> {employee.id}</td>
                                             <td id="fname" className='employee-table-cell'> {employee.firstName} </td>
                                             <td id="mname" className='employee-table-cell'>{employee.middleName}</td>
