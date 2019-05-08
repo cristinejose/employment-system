@@ -1,82 +1,79 @@
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px black;
-}
-
-td {
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-    padding: 8px;
-    font-weight: normal;
-}
-
-th {
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-    padding: 8px;
-    font-weight: bold;
-}
-
-tr:hover {
-    background-color: #e6e6e6;
-}
-
-
-/* tr:nth-child(3tr) {
-    background-color: #dddddd;
-    font-weight: none;
-} */
-
-.employee-table {
-    float: right;
-    margin-right: 70px;
-    width: 71.5%;
-    margin-bottom: 60px;
-    position: relative;
-    margin-top: 150px;
-}
-
-.employee-table-row {
-    background-color: #bfbfbf;
-    /* color: white; */
-}
-
-table,
-th,
-td {
-    border: 1px solid black;
-}
-
-.delete {
-    background-color: #b30000;
-    border: none;
-    padding: 5px;
-    margin-left: 15px;
-}
-
-.edit {
-    border: none;
-    padding: 5px;
-}
-
-.employee-table-cell {
-    text-align: center;
-}
-
-.search_button {
-    background-color: #555555;
-    color: white;
-    font-size: 14px;
-    padding: 8px 10px;
-    font-weight: bold;
-    border: 1px;
-}
-
-.search-container {
-    margin-top: 100px;
-    margin-left: 1000px;
-    position: fixed;
-    width: 500px;
-}
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px black;
+    }
+    
+    td {
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+        padding: 8px;
+        font-weight: normal;
+    }
+    
+    th {
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+        padding: 8px;
+        font-weight: bold;
+    }
+    
+    tr:hover {
+        background-color: #e6e6e6;
+    }
+    
+    .employee-table {
+        float: right;
+        margin-left: 260px;
+        width: 800px;
+        margin-bottom: 60px;
+        position: fixed;
+        margin-top: 120px;
+    }
+    
+    .employee-table-row {
+        background-color: #bfbfbf;
+        /* color: white; */
+    }
+    
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+    
+    .employee-table-cell {
+        text-align: center;
+    }
+    
+    .search-container {
+        margin-top: 120px;
+        margin-left: 1100px;
+        position: fixed;
+        width: 460px;
+    }
+    
+    .profile {
+        height: 330px;
+        width: 220px;
+        margin-left: 1100px;
+        margin-top: 180px;
+        /* position: relative; */
+    }
+    
+    #data {
+        text-align: left;
+    }
+    
+    .box {
+        width: 90px;
+        float: right;
+    }
+    
+    .edit_button {
+        padding: 3px;
+        width: 70px;
+        background-color: rgb(129, 127, 127);
+        color: white;
+    }

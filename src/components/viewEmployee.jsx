@@ -24,12 +24,11 @@ class ViewEmployee extends Component {
         };
     }
     
-    handleClick() {
-        this.setState({
-            active: !this.state.active
-        });
-    }
+   //EDIT METHOD
+   
 
+
+   
     //GET METHOD
     getEmployees() {
         axios.get('http://localhost:8080/restsample01/rest/employees/')
@@ -49,7 +48,7 @@ class ViewEmployee extends Component {
     //DELETE METHOD
     deleteEmployee = (rowIndex) => {
         let employeeList = [...this.state.employeeList];
-        employeeList.splice(rowIndex, 1);
+        employeeList.splice(rowIndex,1);
         this.setState({ employeeList: employeeList });
 
         axios.delete(`http://localhost:8080/restsample01/rest/employees/${rowIndex}`)
@@ -61,12 +60,12 @@ class ViewEmployee extends Component {
 
 
     //RENDER METHOD
-    render() {
+    render() { 
         console.log(this.state.employeeList);
         return (
 
-            <div>
-                <EmployeeTable handleClick={this.handleClick} employeeList={this.state.employeeList} deleteEmployee={this.deleteEmployee} editEmployee={this.editEmployee} />
+            <div >
+                <EmployeeTable employeeList={this.state.employeeList}  deleteEmployee={this.deleteEmployee} editEmployee={this.editEmployee} />
             </div>
 
         );

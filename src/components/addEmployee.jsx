@@ -51,6 +51,7 @@ class AddEmployee extends Component {
     console.log("post");
     console.log(employee);
     let str = "hello";
+    alert("Employee Successfully Added!")
     let headers = {
       'Content-Type': 'application/json',
     }

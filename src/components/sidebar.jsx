@@ -14,32 +14,31 @@ class Sidebar extends Component {
 
     render() {
         return (
-                <HashRouter>
-                    
-                    <ul className= "sidebar">
+            <HashRouter>
+                
+                    <ul className="sidebar">
                         <li><NavLink to='/home'>HOME</NavLink></li>
-                       
                         <li><NavLink to='/addEmployee'>ADD EMPLOYEE</NavLink></li>
                         <li><NavLink to='/viewEmployee'>VIEW EMPLOYEES</NavLink></li>
                         <li><NavLink to='/addCompensation'>ADD COMPENSATION</NavLink></li>
                         <li><NavLink to='/viewCompensation'>VIEW COMPENSATIONS</NavLink></li>
 
-                        
-                        
+
+
                     </ul>
-                  
+
                     <div>
                         <Route path='/home' component={Home} />
-                        
                         <Route path='/addEmployee' component={AddEmployee} />
                         <Route path='/viewEmployee' component={ViewEmployee} />
                         <Route path='/addCompensation' component={AddCompensation} />
                         <Route path='/viewCompensation' component={ViewCompensation} />
-                       
+
 
                     </div>
-                </HashRouter>
-           
+                
+            </HashRouter>
+
         );
     }
 }

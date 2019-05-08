@@ -47,6 +47,7 @@ class AddCompensation extends Component {
     e.preventDefault();
     console.log("post");
     console.log(compensation);
+    alert("Compensation Successfully Added!")
     let str = "hello";
     let headers = {
       'Content-Type': 'application/json',
