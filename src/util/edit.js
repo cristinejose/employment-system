@@ -111,12 +111,12 @@ export function editRow_comp() {
         var rIndex = document.getElementById("rIndex").value;
         console.log(rIndex);
 
-        table.rows[rIndex].cells[0].innerHTML = id;
-        table.rows[rIndex].cells[1].innerHTML = month;
-        table.rows[rIndex].cells[2].innerHTML = salary;
-        table.rows[rIndex].cells[3].innerHTML = bonus;
-        table.rows[rIndex].cells[4].innerHTML = commission;
-        table.rows[rIndex].cells[5].innerHTML = total;
+        table.rows[rIndex].cells[1].innerHTML = id;
+        table.rows[rIndex].cells[2].innerHTML = month;
+        table.rows[rIndex].cells[3].innerHTML = salary;
+        table.rows[rIndex].cells[4].innerHTML = bonus;
+        table.rows[rIndex].cells[5].innerHTML = commission;
+        table.rows[rIndex].cells[6].innerHTML = total;
     }
 
 
